@@ -1,0 +1,47 @@
+@import './breakpoints';
+
+$headerColor: rgb(100, 149, 237);
+$borderColor:rgba(220, 213, 213, 0.848);
+
+header {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $borderColor;
+    .logo {
+        font-family: 'Viaoda Libre', cursive;
+        text-transform: capitalize;
+        font-size: 1.5em;
+        font-weight: 900;
+        color: $headerColor;
+       }
+    }
+    .burger_btn {
+        width: 20px;
+        height: 18px;
+        position: relative;
+        cursor: pointer;
+        div {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $headerColor;
+            border-radius: 5px;
+        }
+        .top-line {
+            top: 0;
+        }
+        .middle-line {
+            top: calc(50% - 1px);
+        }
+        .bottom-line {
+            bottom: 0;
+        }
+        @include lg {
+            display: none;
+        }
+    }

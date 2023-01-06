@@ -1,0 +1,55 @@
+$fontColorGrey: rgb(84, 84, 84); 
+.nav_mobile.show {
+    display: block;
+}
+.nav_mobile {
+    display: none;
+    padding: 0 1.5em;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 2.2em;
+        li {
+            cursor: pointer;
+            padding-bottom: 1.5em;
+            .fa-solid {
+                font-size: 2em;
+                margin-right: 0.5em;
+                color: $headerColor;
+            }
+            .fa-person-dress, .fa-person {
+                font-size: 2.5em;
+            }
+            .fa-house {
+                font-size: 1.7em;
+            }
+        }
+    }
+    .nav_mobile-cat {
+       margin: 3em 0 0;
+       font-size: 0.9em;
+       color: $fontColorGrey;
+    }
+    .log_sell-buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5em 0;
+        button {
+            padding: 1em 0;
+            margin-bottom: 0.5em;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .sell-btn {
+            background-color: $headerColor;
+            color: white;
+        }
+        .log-btn {
+            border: 1px solid $headerColor;
+            background-color: transparent;
+            color: $fontColorGrey;
+        }
+    }
+}
