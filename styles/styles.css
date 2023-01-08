@@ -15,9 +15,9 @@ body {
 
 header {
   width: 100%;
-  height: 50px;
+  height: 60px;
   margin: 0;
-  padding: 0 10px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +29,30 @@ header .logo {
   font-size: 1.5em;
   font-weight: 900;
   color: rgb(100, 149, 237);
+}
+header .log_sell-buttons--desktop {
+  display: none;
+}
+header .log_sell-buttons--desktop button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  padding: 7px 0;
+  width: 120px;
+}
+header .log_sell-buttons--desktop button:nth-child(1) {
+  background-color: rgb(100, 149, 237);
+  color: white;
+}
+header .log_sell-buttons--desktop button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid rgb(100, 149, 237);
+  color: rgb(100, 149, 237);
+}
+@media (min-width: 992px) {
+  header .log_sell-buttons--desktop {
+    display: block;
+  }
 }
 
 .burger_btn {
@@ -53,6 +77,17 @@ header .logo {
 .burger_btn .bottom-line {
   bottom: 0;
 }
+.burger_btn .top-line.show {
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+.burger_btn .middle-line.show {
+  opacity: 0;
+}
+.burger_btn .bottom-line.show {
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+}
 @media (min-width: 992px) {
   .burger_btn {
     display: none;
@@ -62,9 +97,19 @@ header .logo {
 .nav_mobile.show {
   display: block;
 }
+@media (min-width: 992px) {
+  .nav_mobile.show {
+    display: none;
+  }
+}
 
 .nav_mobile {
+  background-color: white;
   display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
   padding: 0 1.5em;
 }
 .nav_mobile ul {
@@ -75,6 +120,10 @@ header .logo {
 .nav_mobile ul li {
   cursor: pointer;
   padding-bottom: 1.5em;
+}
+.nav_mobile ul li a {
+  text-decoration: none;
+  color: black;
 }
 .nav_mobile ul li .fa-solid {
   font-size: 2em;
@@ -132,5 +181,32 @@ header .logo {
 @media (min-width: 768px) {
   .hero .hero-image img {
     max-height: 600px;
+  }
+}
+
+.nav_desktop {
+  display: none;
+  width: 30%;
+}
+.nav_desktop ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+.nav_desktop ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.nav_desktop ul li a {
+  text-decoration: none;
+  color: rgb(84, 84, 84);
+}
+.nav_desktop ul li a:hover {
+  border-bottom: 1px solid rgb(84, 84, 84);
+}
+@media (min-width: 992px) {
+  .nav_desktop {
+    display: block;
   }
 }/*# sourceMappingURL=styles.css.map */

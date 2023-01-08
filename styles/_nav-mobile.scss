@@ -1,9 +1,17 @@
 $fontColorGrey: rgb(84, 84, 84); 
 .nav_mobile.show {
     display: block;
+    @include lg {
+        display: none;
+    }
 }
 .nav_mobile {
+    background-color: white;
     display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
     padding: 0 1.5em;
     ul {
         list-style: none;
@@ -12,6 +20,10 @@ $fontColorGrey: rgb(84, 84, 84);
         li {
             cursor: pointer;
             padding-bottom: 1.5em;
+            a {
+                text-decoration: none;
+                color: black;
+            }
             .fa-solid {
                 font-size: 2em;
                 margin-right: 0.5em;
