@@ -1,4 +1,4 @@
-import {cartProducts, selectedProductToCart, modifySelectedProductToCart} from "./utils.js";
+import {selectedProductToCart, modifySelectedProductToCart, changeValueOfCounter} from "./utils.js";
 let params = (new URL(document.location)).searchParams;
 let id = parseInt(params.get('id'));
 
@@ -20,7 +20,7 @@ const showProductDetails = async () => {
         console.log(e)
     }
     products.filter((product) => product.id === id).map((product) => {
-       productContainer.innerHTML = `
+       productContainer.innerHTML += `
        <div class="product_container--details">
             <div class="product_details--img">
             <img src="${product.image}">
@@ -35,8 +35,8 @@ const showProductDetails = async () => {
         </div>
         </div>
        `
-         let data = cartProducts;
-
+        //  let data = cartProducts; 
+        let data = [];
         const addProductToLocalStorage = () => { 
             data = JSON.parse(localStorage.getItem('cartArray')) || []; 
                 if (data.indexOf(selectedProductToCart) == -1) {
@@ -47,6 +47,7 @@ const showProductDetails = async () => {
                 else {
                     alert("THIS PRODUCT IS YOUR ALREADY");
                 }
+                
         }
         const removeProductFromLocalStorage = (buttonID) => {
            let productToDelete = buttonID;
@@ -64,10 +65,12 @@ const showProductDetails = async () => {
             button.innerHTML = "Remove from cart";
             modifySelectedProductToCart(`${buttonID}`);
             addProductToLocalStorage()
+            changeValueOfCounter()
          }
          else  {
             button.innerHTML = "Add to cart";
             removeProductFromLocalStorage(buttonID)
+            changeValueOfCounter()
          };
        }
        const detailsBtn = document.querySelector('.details_btn').addEventListener('click', addProductToCart);
