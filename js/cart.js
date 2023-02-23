@@ -26,8 +26,8 @@ const showCartProducts = async () => {
         const currentCartProducts = products.filter(product => cartProductsID.some(item => item == product.id)).map((product) => {
             cartContainer.innerHTML += `
             <div class="cart_container--product">
-                <div class="cart_product--image">
-                <img src=${product.image}>
+                <div class="cart_product--image" >
+                <img src=${product.image} data-image=${product.id}>
                 </div>
                 <p class="cart_product--desc">${product.title}</p>
                 <div class="cart_product-price--quantinity">
@@ -46,7 +46,7 @@ const showCartProducts = async () => {
 
     const deleteProduct = (e) => {
         let deleteIconId = e.target.getAttribute("data-delete");
-        let deleteCurrentProduct = cartProductsID.filter((product) => { return product !== deleteIconId; });
+        let deleteCurrentProduct = cartProductsID.filter((product) => { return product !== deleteIconId });
         if (deleteCurrentProduct) {
             cartProductsID = deleteCurrentProduct;
             localStorage.setItem('cartArray', JSON.stringify(deleteCurrentProduct));
@@ -55,10 +55,22 @@ const showCartProducts = async () => {
             changeValueOfCounter();
         }
     }
+
+    const cartProductDetails = document.querySelectorAll('.cart_product--image > img');
+    const showProductDetails = (e) => {
+        let productImage = e.target.getAttribute("data-image");
+        let url = `/product-details.html?id=${productImage}`;
+        window.location.href = url;
+
+    }
+
+    cartProductDetails.forEach((item) => item.addEventListener('click', showProductDetails));
     
     const deleteBtn = document.querySelectorAll('[data-delete]').forEach((btn) => {
         btn.addEventListener('click', deleteProduct);
     });
+
+    
 }
 
 

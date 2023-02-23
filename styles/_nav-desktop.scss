@@ -1,14 +1,15 @@
 .nav_desktop {
     display: none;
-    width: 30%;
+    flex-grow: 1;
     ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         margin: 0;
         padding: 0;
         li {
             list-style: none;
             cursor: pointer;
+            padding: 0 30px;
             a {
                 text-decoration: none;
                 color: $fontColorGrey;

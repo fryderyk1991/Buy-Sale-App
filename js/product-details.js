@@ -34,8 +34,7 @@ const showProductDetails = async () => {
         <button class="details_btn" data-id="${product.id}">Add to cart</button>
         </div>
         </div>
-       `
-        //  let data = cartProducts; 
+       ` 
         let data = [];
         const addProductToLocalStorage = () => { 
             data = JSON.parse(localStorage.getItem('cartArray')) || []; 
