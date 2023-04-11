@@ -1,4 +1,4 @@
-import {selectedProductToCart, modifySelectedProductToCart, changeValueOfCounter} from "./utils.js";
+import {selectedProductToCart, modifySelectedProductToCart, changeValueOfCounter, loadingComponent} from "./utils.js";
 let params = (new URL(document.location)).searchParams;
 let id = parseInt(params.get('id'));
 
@@ -16,6 +16,7 @@ const showProductDetails = async () => {
     const productContainer = document.querySelector('.product_container')
     try {
         products = await getSingleProduct();
+        loadingComponent.classList.remove('active');
     } catch (e) {
         console.log(e)
     }

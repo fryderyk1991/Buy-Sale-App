@@ -1,0 +1,28 @@
+.loading_component.active {
+    .loading_component {
+        display: none;
+    }
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loading_circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 5px solid $headerColor;
+        border-top: 5px solid white;
+        animation: 1s linear infinite rotate; 
+        @keyframes rotate {
+            from {
+              transform: rotate(0deg);
+            }
+          
+            to {
+              transform: rotate(360deg);
+            }
+          }
+    }
+    
+}

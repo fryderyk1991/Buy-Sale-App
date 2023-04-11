@@ -1,4 +1,7 @@
-import { changeValueOfCounter } from "./utils.js";
+import { changeValueOfCounter, loadingComponent } from "./utils.js";
+
+const emptyCart = document.querySelector('.empty_cart');
+const emptyCartText = document.querySelector('.empty_cart > h1');
 
 const getCartProducts = async () => {
   const response = await fetch("https://fakestoreapi.com/products");
@@ -6,6 +9,8 @@ const getCartProducts = async () => {
 
   return products;
 };
+
+
 
 const showCartProducts = async () => {
   const cartContainer = document.querySelector(".cart_container");
@@ -19,6 +24,18 @@ const showCartProducts = async () => {
 
   let cartProductsID = JSON.parse(localStorage.getItem("cartArray")) || [];
 
+ 
+ 
+  if (cartProductsID.length > 0) {
+    emptyCart.classList.remove('active');
+    emptyCartText.style.display = "none";
+  }
+ else {
+  emptyCart.classList.add('active');
+  emptyCartText.style.display = "block";
+ }
+  
+ 
   const currentCartProducts = products
     .filter((product) => cartProductsID.some((item) => item == product.id))
     .map((product) => {
@@ -42,6 +59,8 @@ const showCartProducts = async () => {
             <div>`;
     });
 
+  
+
   const deleteProduct = (e) => {
     let deleteIconId = e.target.getAttribute("data-delete");
     let deleteCurrentProduct = cartProductsID.filter((product) => {
@@ -50,7 +69,7 @@ const showCartProducts = async () => {
     if (deleteCurrentProduct) {
       cartProductsID = deleteCurrentProduct;
       localStorage.setItem("cartArray", JSON.stringify(deleteCurrentProduct));
-      cartContainer.innerHTML = "";
+      cartContainer.innerHTML = ""; 
       showCartProducts();
       changeValueOfCounter();
     }

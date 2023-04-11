@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fake store | Cart</title>
     <!-- Font-Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <!-- Google-Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link            
-    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Viaoda+Libre&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo"><a href="/index.html">buy&sale</a></div>
-        <nav class="nav_desktop">
-            <ul class="nav_desktop--ul">
-                <li>
-                   <a href="#">Women</a>
-                </li>
-                <li>
-                    <a href="#">Men</a>
-                </li>
-                <li>
-                    <a href="#">Kids</a>
-                </li>
-                <li>
-                    <a href="#">Home</a> 
-                </li>
-            </ul>
-        </nav>
-        <div class="cart_icon">
-            <div class="cart_icon--counter"></div>
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-        <div class="log_sell-buttons--desktop">
-            <button>Sell now</button>
-            <button>Sign up | Log in</button>
-        </div>  
-        <div class="burger_btn">
-            <div class="top-line"></div>
-            <div class="middle-line"></div>
-            <div class="bottom-line"></div>
-        </div>
+      <div class="logo"><a href="/index.html">buy&sale</a></div>
+      <nav class="nav_desktop">
+        <ul class="nav_desktop--ul">
+          <li>
+            <a href="#">Women</a>
+          </li>
+          <li>
+            <a href="#">Men</a>
+          </li>
+          <li>
+            <a href="#">Kids</a>
+          </li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="cart_icon">
+        <div class="cart_icon--counter"></div>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+      <div class="log_sell-buttons--desktop">
+        <button>Sell now</button>
+        <button>Sign up | Log in</button>
+      </div>
+      <div class="burger_btn">
+        <div class="top-line"></div>
+        <div class="middle-line"></div>
+        <div class="bottom-line"></div>
+      </div>
     </header>
     <div class="nav_mobile">
-        <div class="log_sell-buttons">
-            <button class="sell-btn">Sell now</button>
-            <button class="log-btn">Sign up | Log in</button>
-        </div>
-        <p class="nav_mobile-cat">Categories</p>
-        <ul>
-            <li><i class="fa-solid fa-person-dress"></i><a href="#">Women</a></li>
-            <li><i class="fa-solid fa-person"></i><a href="#">Men</a></li>
-            <li><i class="fa-solid fa-child"></i><a href="#">Kids</a></li>
-            <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
-        </ul>
+      <div class="log_sell-buttons">
+        <button class="sell-btn">Sell now</button>
+        <button class="log-btn">Sign up | Log in</button>
+      </div>
+      <p class="nav_mobile-cat">Categories</p>
+      <ul>
+        <li><i class="fa-solid fa-person-dress"></i><a href="#">Women</a></li>
+        <li><i class="fa-solid fa-person"></i><a href="#">Men</a></li>
+        <li><i class="fa-solid fa-child"></i><a href="#">Kids</a></li>
+        <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
+      </ul>
     </div>
     <section class="cart_container">
+      <div class="empty_cart active">
+        <h1>cart empty</h1>
+      </div>
     </section>
     <div class="total_price">
-        <h3>Total:</h3>
-        <p>0$</p>
+      <h3>Total:</h3>
+      <p></p>
     </div>
     <footer class="footer">
-        <div class="footer_logo">buy&sale</div>
-        <div class="footer_copy">&#169; 2023 Buy&Sale. All rights reserved.</div>
+      <div class="footer_logo">buy&sale</div>
+      <div class="footer_copy">&#169; 2023 Buy&Sale. All rights reserved.</div>
     </footer>
     <script src="/js/cart.js" type="module"></script>
-</body>
+  </body>
 </html>

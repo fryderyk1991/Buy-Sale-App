@@ -348,7 +348,7 @@ header .log_sell-buttons--desktop button:nth-child(2) {
 }
 
 .product_container {
-  min-height: calc(100vh - 120px - 60px);
+  min-height: calc(90vh - 120px - 60px);
   margin: 2em 0;
   margin-bottom: 4em;
   padding: 0 1.5em;
@@ -465,11 +465,26 @@ header .log_sell-buttons--desktop button:nth-child(2) {
   margin-top: 2em;
   margin-bottom: 3em;
   padding: 0 1.5em;
+  min-height: calc(80vh - 120px - 60px);
 }
 @media (min-width: 1200px) {
   .cart_container {
     padding: 0 3.5em;
   }
+}
+.cart_container .empty_cart.active {
+  width: 100%;
+  height: 100%;
+}
+.cart_container .empty_cart.active .empty_cart {
+  display: none;
+}
+.cart_container .empty_cart.active h1 {
+  color: rgb(100, 149, 237);
+  opacity: 0.7;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: calc(80vh - 120px - 60px);
 }
 .cart_container .cart_container--product {
   display: flex;
@@ -480,6 +495,7 @@ header .log_sell-buttons--desktop button:nth-child(2) {
 .cart_container .cart_container--product .cart_product--image {
   width: 100px;
   height: 100px;
+  cursor: pointer;
   width: 30%;
 }
 .cart_container .cart_container--product .cart_product--image img {
@@ -564,6 +580,7 @@ header .log_sell-buttons--desktop button:nth-child(2) {
 .total_price p {
   width: 30%;
   text-align: center;
+  font-weight: bold;
 }
 @media (min-width: 1200px) {
   .total_price p {
@@ -577,5 +594,32 @@ header .log_sell-buttons--desktop button:nth-child(2) {
   .total_price h3 {
     width: 60%;
     text-align: center;
+  }
+}
+
+.loading_component.active {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading_component.active .loading_component {
+  display: none;
+}
+.loading_component.active .loading_circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid rgb(100, 149, 237);
+  border-top: 5px solid white;
+  animation: 1s linear infinite rotate;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=styles.css.map */

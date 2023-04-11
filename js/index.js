@@ -1,17 +1,21 @@
-import {} from "./utils.js";
+import { loadingComponent } from "./utils.js";
 const getProducts = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     const products = await response.json();
 
-
     return products;
 };
+// setTimeout(() => {
+//     loadingComponent.classList.remove('active')
+// })
 
 const showData = async () => {
     let products = [];
     const allProducts = document.querySelector('.all_products');
     try {
         products = await getProducts();
+        loadingComponent.classList.remove('active');
+        console.log(products)
     } catch (e) {
         console.log(e)
     }
