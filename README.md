@@ -1,7 +1,7 @@
 # Buy-Sale-App
 
-Simple App using HTML, CSS and JAVASCRIPT.
-Live : https://app.netlify.com/sites/fastidious-kashata-bf50d5/overview
+Simple App using HTML, SCSS and JAVASCRIPT.
+#Live : https://app.netlify.com/sites/fastidious-kashata-bf50d5/overview
 
 ![Zrzut ekranu 2023-04-11 230045](https://user-images.githubusercontent.com/95125510/231287660-8ea7269b-27e8-4271-a315-79313a9a267d.png)
 ![Zrzut ekranu 2023-04-11 230141](https://user-images.githubusercontent.com/95125510/231287671-a64eaf7d-1073-4741-a902-2f5650012197.png)
