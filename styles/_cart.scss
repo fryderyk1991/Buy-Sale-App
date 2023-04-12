@@ -20,6 +20,12 @@
             text-transform: capitalize;
             text-align: center;
             line-height: calc(80vh - 120px - 60px);
+            @include md {
+                font-size: 2em;
+            }
+            @include lg {
+                font-size: 3em;
+            }
         }
     }
    

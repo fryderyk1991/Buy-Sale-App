@@ -486,6 +486,16 @@ header .log_sell-buttons--desktop button:nth-child(2) {
   text-align: center;
   line-height: calc(80vh - 120px - 60px);
 }
+@media (min-width: 768px) {
+  .cart_container .empty_cart.active h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 992px) {
+  .cart_container .empty_cart.active h1 {
+    font-size: 3em;
+  }
+}
 .cart_container .cart_container--product {
   display: flex;
   justify-content: space-between;
