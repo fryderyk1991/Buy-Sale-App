@@ -5,11 +5,11 @@ Simple App using HTML, SCSS and JAVASCRIPT.
 This project was built with pure Javascript.
 My purpose was to build an application where user can buy something and sell at the same time, but meanwhile I just focused on building a simple website where I can learn how to use localStorage and async/await. Finally I know how to use async/await and how to work with API.
 
-I used here API https://fakestoreapi.com/
+I used here https://fakestoreapi.com/ API.
 Sign up, Log in buttons and Navigation are only made just to make the site look better, they are not clickable.
 The Project is not finished. Maybe in the future I'll come back here to finish this project.
 
-live => https://willowy-manatee-a72165.netlify.app
+live => https://voluble-sunflower-f6e224.netlify.app
 
 
 
